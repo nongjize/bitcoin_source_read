@@ -1534,7 +1534,7 @@ bool CScriptCheck::operator()() const
         return error("CScriptCheck() : %s VerifySignature failed", ptxTo->GetHash().ToString());
     return true;
 }
-//验证签名
+//验证签名//
 bool VerifySignature(const CCoins& txFrom, const CTransaction& txTo, unsigned int nIn, unsigned int flags, int nHashType)
 {
     return CScriptCheck(txFrom, txTo, nIn, flags, nHashType)();
